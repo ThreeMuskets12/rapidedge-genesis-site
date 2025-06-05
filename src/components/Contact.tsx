@@ -8,7 +8,7 @@ const Contact = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-blue-400">Get</span> Started
+            <span className="text-teal-400">Get</span> Started
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to accelerate your project? Schedule a free consultation to discuss your engineering challenges and explore solutions.
@@ -21,8 +21,8 @@ const Contact = () => {
             
             <div className="space-y-6">
               <div className="flex items-center">
-                <div className="p-3 bg-blue-500/20 rounded-lg mr-4">
-                  <Mail className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                  <Mail className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">Email</div>
@@ -31,8 +31,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="p-3 bg-blue-500/20 rounded-lg mr-4">
-                  <Phone className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                  <Phone className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">Phone</div>
@@ -41,8 +41,8 @@ const Contact = () => {
               </div>
               
               <div className="flex items-center">
-                <div className="p-3 bg-blue-500/20 rounded-lg mr-4">
-                  <MapPin className="w-6 h-6 text-blue-400" />
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                  <MapPin className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">Location</div>
@@ -51,7 +51,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-xl border border-blue-500/20">
+            <div className="mt-8 p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20">
               <h4 className="text-lg font-semibold text-white mb-2">Free Consultation</h4>
               <p className="text-gray-300 text-sm mb-4">
                 Get expert advice on your project challenges and discover how we can help accelerate your development timeline.
@@ -67,8 +67,8 @@ const Contact = () => {
 
           <div className="bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700">
             <div className="flex items-center mb-6">
-              <div className="p-3 bg-blue-500/20 rounded-lg mr-4">
-                <Calendar className="w-8 h-8 text-blue-400" />
+              <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                <Calendar className="w-8 h-8 text-teal-400" />
               </div>
               <h3 className="text-2xl font-bold text-white">Schedule Consultation</h3>
             </div>
@@ -86,7 +86,7 @@ const Contact = () => {
                 <div>3. Replace this placeholder with the actual embed</div>
               </div>
               <div className="mt-6">
-                <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg transition-colors">
+                <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg transition-colors">
                   Book Consultation (Demo)
                 </button>
               </div>

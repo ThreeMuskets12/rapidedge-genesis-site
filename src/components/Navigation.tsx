@@ -25,7 +25,7 @@ const Navigation = () => {
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="text-2xl font-bold text-blue-400">
+          <div className="text-2xl font-bold text-teal-400">
             RapidEdge <span className="text-white">Solutions</span>
           </div>
           
@@ -35,17 +35,17 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 relative group"
+                className="text-gray-300 hover:text-teal-400 transition-colors duration-200 relative group"
               >
                 {item}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-teal-400 transition-all duration-300 group-hover:w-full"></span>
               </button>
             ))}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-blue-400 transition-colors"
+            className="md:hidden text-white hover:text-teal-400 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -59,7 +59,7 @@ const Navigation = () => {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block w-full text-left py-2 text-gray-300 hover:text-blue-400 transition-colors duration-200"
+                className="block w-full text-left py-2 text-gray-300 hover:text-teal-400 transition-colors duration-200"
               >
                 {item}
               </button>

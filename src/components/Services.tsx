@@ -35,7 +35,7 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-blue-400">Our</span> Services
+            <span className="text-teal-400">Our</span> Services
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive engineering solutions tailored to accelerate your innovation from concept to market
@@ -46,11 +46,11 @@ const Services = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-blue-500/10"
+              className="group bg-gray-800/80 backdrop-blur-sm p-8 rounded-xl border border-gray-700 hover:border-teal-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-teal-500/10"
             >
               <div className="flex items-center mb-6">
-                <div className="p-3 bg-blue-500/20 rounded-lg mr-4 group-hover:bg-blue-500/30 transition-colors">
-                  <service.icon className="w-8 h-8 text-blue-400" />
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
+                  <service.icon className="w-8 h-8 text-teal-400" />
                 </div>
                 <h3 className="text-2xl font-bold text-white">{service.title}</h3>
               </div>
@@ -62,7 +62,7 @@ const Services = () => {
               <ul className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-400">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full mr-3"></div>
+                    <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
                     {feature}
                   </li>
                 ))}

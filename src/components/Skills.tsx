@@ -41,7 +41,7 @@ const Skills = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-blue-400">Technical</span> Expertise
+            <span className="text-teal-400">Technical</span> Expertise
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Comprehensive skill set spanning mechanical, electrical, and software engineering disciplines
@@ -52,11 +52,11 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="group bg-gradient-to-br from-gray-800 to-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-blue-500/50 transition-all duration-300 hover:scale-105"
+              className="group bg-gradient-to-br from-gray-800 to-gray-800/50 p-6 rounded-xl border border-gray-700 hover:border-teal-500/50 transition-all duration-300 hover:scale-105"
             >
               <div className="flex items-center mb-4">
-                <div className="p-2 bg-blue-500/20 rounded-lg mr-3 group-hover:bg-blue-500/30 transition-colors">
-                  <category.icon className="w-6 h-6 text-blue-400" />
+                <div className="p-2 bg-teal-500/20 rounded-lg mr-3 group-hover:bg-teal-500/30 transition-colors">
+                  <category.icon className="w-6 h-6 text-teal-400" />
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
               </div>
@@ -67,7 +67,7 @@ const Skills = () => {
                     key={skillIndex}
                     className="flex items-center text-gray-300 group-hover:text-gray-200 transition-colors"
                   >
-                    <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 opacity-60"></div>
+                    <div className="w-1.5 h-1.5 bg-teal-400 rounded-full mr-3 opacity-60"></div>
                     <span className="text-sm">{skill}</span>
                   </div>
                 ))}
