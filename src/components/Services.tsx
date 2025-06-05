@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Microscope, Cog, Circuit, Lightbulb } from 'lucide-react';
+import { Microscope, Cog, Cpu, Lightbulb } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -23,7 +23,7 @@ const Services = () => {
       features: ["Medical Device Design", "Laboratory Automation", "Diagnostic Equipment", "Regulatory Compliance"]
     },
     {
-      icon: Circuit,
+      icon: Cpu,
       title: "Electronic Systems",
       description: "Complete electronic system design from PCB layout to embedded programming and device integration.",
       features: ["PCB Design & Layout", "Embedded Programming", "Sensor Integration", "System Architecture"]
