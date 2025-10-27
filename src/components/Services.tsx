@@ -7,7 +7,13 @@ const Services = () => {
     {
       icon: Cog,
       title: "Mechanical",
-      description: "Have sketches on the back of a napkin needing proof-of-concept validation? Have an existing engineering team needing bandwidth expansion?\n\nEngagements that meet you where you are.",
+      description: (
+        <>
+          Have back-of-a-napkin sketches needing proof-of-concept validation? Have an existing engineering team needing bandwidth expansion?
+          <br /><br />
+          <strong>Engagements that meet you where you are.</strong>
+        </>
+      ),
       features: [
         {
           title: "3D CAD Design",
