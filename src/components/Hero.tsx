@@ -23,7 +23,7 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-6xl md:text-8xl font-bold mb-6 animate-fade-in">
             <span className="bg-gradient-to-r from-teal-400 via-green-500 to-teal-600 bg-clip-text text-transparent">
               RapidEdge
             </span>
@@ -32,12 +32,11 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-200">
-            Engineering Excellence Through Rapid Prototyping & Innovation
+            Faster Engineered Solutions Done Right the First Time
           </p>
           
           <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-300">
-            Specializing in Life Science Instrumentation, Product Development, and Cutting-Edge Engineering Solutions. 
-            From concept to completion, we accelerate your vision into reality.
+            Save time and money by eliminating management and communication overhead from inter-discipline collaboration. Mechanical, electrical, and software engineering done right, by the same team.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">

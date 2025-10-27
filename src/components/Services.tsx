@@ -5,28 +5,22 @@ import { Microscope, Cog, Cpu, Lightbulb } from 'lucide-react';
 const Services = () => {
   const services = [
     {
-      icon: Lightbulb,
-      title: "Rapid Prototyping",
-      description: "Fast iteration from concept to functional prototype using advanced manufacturing techniques and cutting-edge technologies.",
-      features: ["3D Printing & Additive Manufacturing", "CNC Machining", "Rapid Tooling", "Proof of Concept Development"]
-    },
-    {
       icon: Cog,
-      title: "Product Development",
-      description: "Full-cycle product development from initial concept through design for manufacturing and market readiness.",
-      features: ["Design for Manufacturing (DFM)", "Engineering Analysis", "Prototyping & Testing", "Production Planning"]
-    },
-    {
-      icon: Microscope,
-      title: "Life Science Instrumentation",
-      description: "Specialized expertise in developing precision instruments for medical devices, diagnostics, and laboratory equipment.",
-      features: ["Medical Device Design", "Laboratory Automation", "Diagnostic Equipment", "Regulatory Compliance"]
+      title: "Mechanical",
+      description: "Complete mechanical design and prototyping solutions from concept through manufacturing.",
+      features: ["3D CAD Design", "Prototyping & Testing", "Design for Manufacturing", "CNC & 3D Printing"]
     },
     {
       icon: Cpu,
-      title: "Electronic Systems",
-      description: "Complete electronic system design from PCB layout to embedded programming and device integration.",
-      features: ["PCB Design & Layout", "Embedded Programming", "Sensor Integration", "System Architecture"]
+      title: "Electrical",
+      description: "Full-service electrical design including PCB development and embedded systems integration.",
+      features: ["PCB Design & Layout", "Circuit Analysis", "Sensor Integration", "Power Systems"]
+    },
+    {
+      icon: Lightbulb,
+      title: "Software",
+      description: "End-to-end software development for embedded systems and control applications.",
+      features: ["Embedded Programming", "Firmware Development", "Control Algorithms", "System Integration"]
     }
   ];
 
@@ -37,12 +31,9 @@ const Services = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-teal-400">Our</span> Services
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive engineering solutions tailored to accelerate your innovation from concept to market
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div 
               key={index}
