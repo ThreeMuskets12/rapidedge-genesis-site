@@ -63,9 +63,9 @@ const About = () => {
               />
               
               {/* Connection lines to center */}
-              <line x1="200" y1="60" x2="200" y2="200" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
-              <line x1="340" y1="320" x2="200" y2="200" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
-              <line x1="60" y1="320" x2="200" y2="200" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
+              <line x1="200" y1="60" x2="200" y2="233" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
+              <line x1="340" y1="320" x2="200" y2="233" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
+              <line x1="60" y1="320" x2="200" y2="233" stroke="rgba(20, 184, 166, 0.3)" strokeWidth="1" strokeDasharray="4,4" />
               
               {/* Corner circles and labels */}
               {/* Fast - Top */}
@@ -82,9 +82,9 @@ const About = () => {
               <text x="60" y="328" textAnchor="middle" fill="rgb(20, 184, 166)" fontSize="18" fontWeight="bold">Quality</text>
               
               {/* Center - RapidEdge Solutions */}
-              <circle cx="200" cy="200" r="60" fill="rgba(20, 184, 166, 0.2)" stroke="rgb(20, 184, 166)" strokeWidth="3" />
-              <text x="200" y="195" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">RapidEdge</text>
-              <text x="200" y="215" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Solutions</text>
+              <circle cx="200" cy="233" r="60" fill="rgba(20, 184, 166, 0.2)" stroke="rgb(20, 184, 166)" strokeWidth="3" />
+              <text x="200" y="228" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">RapidEdge</text>
+              <text x="200" y="248" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Solutions</text>
             </svg>
           </div>
         </div>
