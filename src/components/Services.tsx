@@ -30,7 +30,13 @@ const Services = () => {
     {
       icon: Cpu,
       title: "Electrical",
-      description: "Have high level ideas? Existing breadboard and Arduino prototypes? Already on a custom embedded PCB? Engagements that meet you where you are.",
+      description: (
+        <>
+          Have a vision for your device&apos;s functionality needing fast development? Have existing breadboard prototypes needing a transformation into production-ready PCBs?
+          <br /><br />
+          <strong>Engagements that meet you where you are.</strong>
+        </>
+      ),
       features: [
         {
           title: "Full Service Circuit Design",
