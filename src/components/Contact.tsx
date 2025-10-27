@@ -1,8 +1,17 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Calendar, Mail, Phone, MapPin } from 'lucide-react';
 
 const Contact = () => {
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
@@ -73,34 +82,12 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-white">Schedule Consultation</h3>
             </div>
             
-            {/* Calendly Embed Placeholder */}
-            <div className="bg-gray-700/50 rounded-lg p-8 text-center border-2 border-dashed border-gray-600">
-              <Calendar className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h4 className="text-lg font-semibold text-white mb-2">Calendly Integration</h4>
-              <p className="text-gray-300 mb-4">
-                To complete the integration, you'll need to:
-              </p>
-              <div className="text-left text-sm text-gray-400 space-y-2">
-                <div>1. Create a Calendly account at calendly.com</div>
-                <div>2. Get your Calendly embed code</div>
-                <div>3. Replace this placeholder with the actual embed</div>
-              </div>
-              <div className="mt-6">
-                <button className="bg-teal-500 hover:bg-teal-600 text-white px-6 py-2 rounded-lg transition-colors">
-                  Book Consultation (Demo)
-                </button>
-              </div>
-            </div>
-            
-            <div className="mt-6 text-sm text-gray-400">
-              <p>
-                <strong>Note:</strong> Replace the placeholder above with your actual Calendly embed code. 
-                The embed typically looks like:
-              </p>
-              <code className="block mt-2 p-2 bg-gray-900 rounded text-xs">
-                &lt;div className="calendly-inline-widget" data-url="https://calendly.com/your-link"&gt;&lt;/div&gt;
-              </code>
-            </div>
+            {/* Calendly Embed */}
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/noah-rapidedge/30min"
+              style={{ minWidth: '320px', height: '700px' }}
+            />
           </div>
         </div>
       </div>
