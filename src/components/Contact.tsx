@@ -75,15 +75,15 @@ const Contact = () => {
               </div>
 
               {/* Profile Section */}
-              <div className="flex flex-col items-center text-center space-y-4">
+              <div className="flex flex-col items-center text-center space-y-6">
                 <img 
                   src={noahHeadshot} 
                   alt="Noah Page" 
-                  className="w-40 h-40 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+                  className="w-56 h-56 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
                 />
                 <div>
-                  <h3 className="text-xl font-bold text-white mb-1">Noah Page</h3>
-                  <p className="text-teal-400 font-semibold text-sm">Principal Engineering Consultant</p>
+                  <h3 className="text-3xl font-bold text-white mb-2">Noah Page</h3>
+                  <p className="text-teal-400 font-semibold text-lg">Principal Engineering Consultant</p>
                 </div>
               </div>
             </div>
