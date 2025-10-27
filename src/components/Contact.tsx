@@ -16,17 +16,16 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div className="mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-teal-400">Get</span> Started
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl">
-            Ready to accelerate your project? Schedule a free consultation to discuss your engineering challenges and explore solutions.
-          </p>
-        </div>
-
-        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-end">
+        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-start">
           <div>
+            <div className="mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="text-teal-400">Get</span> Started
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl">
+                Ready to accelerate your project? Schedule a free consultation to discuss your engineering challenges and explore solutions.
+              </p>
+            </div>
             <div className="flex gap-8 items-start mb-8">
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -102,7 +101,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md ml-auto">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md">
             <div className="flex items-center mb-4">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
