@@ -1,17 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { ArrowRight, Zap, Cpu } from 'lucide-react';
 
 const Hero = () => {
-  const [shouldBounce, setShouldBounce] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShouldBounce(false);
-    }, 2000); // Stop bouncing after 2 seconds
-    
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -25,10 +15,10 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Animated Icons */}
           <div className="flex justify-center mb-8 space-x-8">
-            <div className={`p-3 bg-teal-500/20 rounded-full transition-transform ${shouldBounce ? 'animate-bounce [animation-delay:100ms]' : ''}`}>
+            <div className="p-3 bg-teal-500/20 rounded-full animate-bounce-few [animation-delay:100ms]">
               <Zap className="w-8 h-8 text-teal-400" />
             </div>
-            <div className={`p-3 bg-green-500/20 rounded-full transition-transform ${shouldBounce ? 'animate-bounce [animation-delay:300ms]' : ''}`}>
+            <div className="p-3 bg-green-500/20 rounded-full animate-bounce-few [animation-delay:300ms]">
               <Cpu className="w-8 h-8 text-green-400" />
             </div>
           </div>
@@ -70,7 +60,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-transform ${shouldBounce ? 'animate-bounce' : ''}`}>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-few">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
         </div>
