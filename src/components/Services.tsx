@@ -49,7 +49,7 @@ const Services = () => {
     {
       icon: Lightbulb,
       title: "Software",
-      description: "End-to-end software development for embedded systems and control applications.",
+      description: "Meeting you where you are: Collaboration can begin from just high level ideas, to existing breadboard and Arduino prototypes, to custom embedded PCBs.",
       features: [
         {
           title: "Embedded Firmware",
