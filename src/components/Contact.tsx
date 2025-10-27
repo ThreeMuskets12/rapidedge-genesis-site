@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Calendar, Mail, Phone, MapPin } from 'lucide-react';
+import { Calendar, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 
 const Contact = () => {
   useEffect(() => {
@@ -46,6 +46,16 @@ const Contact = () => {
                 <div>
                   <div className="text-white font-semibold">Phone</div>
                   <a href="tel:+15183139009" className="text-gray-300 hover:text-teal-400 transition-colors">+1 (518) 313-9009</a>
+                </div>
+              </div>
+              
+              <div className="flex items-center">
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                  <Linkedin className="w-6 h-6 text-teal-400" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold">LinkedIn</div>
+                  <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-teal-400 transition-colors">noah-page</a>
                 </div>
               </div>
               
