@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Calendar, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import noahHeadshot from '@/assets/noah-headshot.png';
 
 const Contact = () => {
   useEffect(() => {
@@ -24,7 +25,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-[1fr,auto,auto] gap-8 items-start">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
@@ -81,6 +82,19 @@ const Contact = () => {
                 <li>• Timeline and cost estimation</li>
                 <li>• Technology recommendations</li>
               </ul>
+            </div>
+          </div>
+
+          {/* Profile Section */}
+          <div className="flex flex-col items-center text-center space-y-4 px-6">
+            <img 
+              src={noahHeadshot} 
+              alt="Noah Page" 
+              className="w-48 h-48 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+            />
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-1">Noah Page</h3>
+              <p className="text-teal-400 font-semibold">Principal Engineering Consultant</p>
             </div>
           </div>
 
