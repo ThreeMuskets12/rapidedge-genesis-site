@@ -12,7 +12,9 @@ const About = () => {
               <span className="text-teal-400">About</span> RapidEdge
             </h2>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              It doesn't always have to be a compromise. RapidEdge Solutions cheats the engineering trilemma by cutting out the overhead from cross-team collaboration. Maximize your budget on getting fast and effective solutions, instead of on meetings and workshops between Mechanical, Electrical, and Software teams for "Circling Back" and "Touching Base".
+              It doesn't always have to be a compromise. RapidEdge Solutions cheats the engineering trilemma by cutting out the overhead from cross-team collaboration.
+              <br /><br />
+              Maximize your budget on getting fast and effective solutions, instead of on meetings and workshops between Mechanical, Electrical, and Software teams for "Circling Back" and "Touching Base".
             </p>
           </div>
 
