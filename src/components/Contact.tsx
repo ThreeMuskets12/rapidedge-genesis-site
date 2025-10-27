@@ -29,7 +29,7 @@ const Contact = () => {
             
             <div className="mt-auto">
             {/* Profile Section */}
-            <div className="flex flex-col items-center text-center space-y-6 mb-8">
+            <div className="flex items-center gap-6 mb-8">
               <img 
                 src={noahHeadshot} 
                 alt="Noah Page" 
