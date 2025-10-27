@@ -16,11 +16,11 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-teal-400">Get</span> Started
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl">
             Ready to accelerate your project? Schedule a free consultation to discuss your engineering challenges and explore solutions.
           </p>
         </div>
