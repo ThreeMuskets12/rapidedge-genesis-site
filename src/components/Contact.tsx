@@ -74,7 +74,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md ml-auto">
             <div className="flex items-center mb-4">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
