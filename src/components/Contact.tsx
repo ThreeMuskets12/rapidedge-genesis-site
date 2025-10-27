@@ -25,7 +25,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-[1fr,auto,auto] gap-8 items-start">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
@@ -85,37 +85,34 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="space-y-8">
-            {/* Profile Section */}
-            <div className="flex flex-col items-center text-center space-y-4">
-              <img 
-                src={noahHeadshot} 
-                alt="Noah Page" 
-                className="w-48 h-48 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
-              />
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-1">Noah Page</h3>
-                <p className="text-teal-400 font-semibold">Principal Engineering Consultant</p>
-              </div>
+          {/* Profile Section */}
+          <div className="flex flex-col items-center text-center space-y-4 px-6">
+            <img 
+              src={noahHeadshot} 
+              alt="Noah Page" 
+              className="w-48 h-48 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+            />
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-1">Noah Page</h3>
+              <p className="text-teal-400 font-semibold">Principal Engineering Consultant</p>
             </div>
+          </div>
 
-            {/* Calendly Section */}
-            <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700">
-              <div className="flex items-center mb-4">
-                <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
-                  <Calendar className="w-6 h-6 text-teal-400" />
-                </div>
-                <h3 className="text-xl font-bold text-white">Schedule Consultation</h3>
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md ml-auto">
+            <div className="flex items-center mb-4">
+              <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
+                <Calendar className="w-6 h-6 text-teal-400" />
               </div>
-              
-              {/* Calendly Embed */}
-              <div 
-                className="calendly-inline-widget" 
-                data-url="https://calendly.com/noah-rapidedge/30min"
-                data-resize="true"
-                style={{ width: '384px', height: '448px' }}
-              />
+              <h3 className="text-xl font-bold text-white">Schedule Consultation</h3>
             </div>
+            
+            {/* Calendly Embed */}
+            <div 
+              className="calendly-inline-widget" 
+              data-url="https://calendly.com/noah-rapidedge/30min"
+              data-resize="true"
+              style={{ width: '384px', height: '448px' }}
+            />
           </div>
         </div>
       </div>
