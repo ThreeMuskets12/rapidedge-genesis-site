@@ -23,7 +23,7 @@ const Contact = () => {
                 <span className="text-teal-400">Get</span> Started
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl">
-                Schedule a free 30 minute consultation to discuss your unique engineering challenges and learn more about solutions.
+                Schedule a <strong className="font-bold">free 30 minute consultation</strong> to discuss your unique engineering challenges and learn more about solutions.
               </p>
             </div>
             
