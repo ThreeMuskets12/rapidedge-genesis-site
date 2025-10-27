@@ -107,11 +107,11 @@ export default {
 					}
 				},
 				'bounce-settle': {
-					'0%, 33%, 100%': {
+					'0%, 25%, 50%, 100%': {
 						transform: 'translateY(0)',
 						animationTimingFunction: 'cubic-bezier(0,0,0.2,1)'
 					},
-					'16.5%': {
+					'12.5%, 37.5%': {
 						transform: 'translateY(-25%)',
 						animationTimingFunction: 'cubic-bezier(0.8,0,1,1)'
 					}
