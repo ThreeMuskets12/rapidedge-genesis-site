@@ -25,53 +25,70 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr,auto,auto] gap-8 items-start">
+        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-start">
           <div>
-            <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
-            
-            <div className="space-y-6">
-              <a href="mailto:noah@rapidedge.solutions" className="flex items-center group">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
-                  <Mail className="w-6 h-6 text-teal-400" />
+            <div className="flex gap-8 items-start mb-8">
+              <div className="flex-1">
+                <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+                
+                <div className="space-y-6">
+                  <a href="mailto:noah@rapidedge.solutions" className="flex items-center group">
+                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
+                      <Mail className="w-6 h-6 text-teal-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">Email</div>
+                      <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah@rapidedge.solutions</div>
+                    </div>
+                  </a>
+                  
+                  <a href="tel:+15183139009" className="flex items-center group">
+                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
+                      <Phone className="w-6 h-6 text-teal-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">Phone</div>
+                      <div className="text-gray-300 group-hover:text-teal-400 transition-colors">+1 (518) 313-9009</div>
+                    </div>
+                  </a>
+                  
+                  <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
+                      <Linkedin className="w-6 h-6 text-teal-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">LinkedIn</div>
+                      <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah-page</div>
+                    </div>
+                  </a>
+                  
+                  <div className="flex items-center">
+                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+                      <MapPin className="w-6 h-6 text-teal-400" />
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">Location</div>
+                      <div className="text-gray-300">Providence, RI</div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+
+              {/* Profile Section */}
+              <div className="flex flex-col items-center text-center space-y-4">
+                <img 
+                  src={noahHeadshot} 
+                  alt="Noah Page" 
+                  className="w-40 h-40 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+                />
                 <div>
-                  <div className="text-white font-semibold">Email</div>
-                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah@rapidedge.solutions</div>
-                </div>
-              </a>
-              
-              <a href="tel:+15183139009" className="flex items-center group">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
-                  <Phone className="w-6 h-6 text-teal-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Phone</div>
-                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">+1 (518) 313-9009</div>
-                </div>
-              </a>
-              
-              <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
-                  <Linkedin className="w-6 h-6 text-teal-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">LinkedIn</div>
-                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah-page</div>
-                </div>
-              </a>
-              
-              <div className="flex items-center">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
-                  <MapPin className="w-6 h-6 text-teal-400" />
-                </div>
-                <div>
-                  <div className="text-white font-semibold">Location</div>
-                  <div className="text-gray-300">Providence, RI</div>
+                  <h3 className="text-xl font-bold text-white mb-1">Noah Page</h3>
+                  <p className="text-teal-400 font-semibold text-sm">Principal Engineering Consultant</p>
                 </div>
               </div>
             </div>
 
-            <div className="mt-8 p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20">
+            <div className="p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20">
               <h4 className="text-lg font-semibold text-white mb-2">Free Consultation</h4>
               <p className="text-gray-300 text-sm mb-4">
                 Get expert advice on your project challenges and discover how we can help accelerate your development timeline.
@@ -82,19 +99,6 @@ const Contact = () => {
                 <li>• Timeline and cost estimation</li>
                 <li>• Technology recommendations</li>
               </ul>
-            </div>
-          </div>
-
-          {/* Profile Section */}
-          <div className="flex flex-col items-center text-center space-y-4 px-6">
-            <img 
-              src={noahHeadshot} 
-              alt="Noah Page" 
-              className="w-48 h-48 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
-            />
-            <div>
-              <h3 className="text-2xl font-bold text-white mb-1">Noah Page</h3>
-              <p className="text-teal-400 font-semibold">Principal Engineering Consultant</p>
             </div>
           </div>
 
