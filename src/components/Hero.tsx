@@ -32,7 +32,7 @@ const Hero = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 animate-fade-in delay-200">
-            Faster Engineered Solutions Done Right the First Time
+            <em>Faster</em> Engineered Solutions Done <em>Right the First Time</em>
           </p>
           
           <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-300">
