@@ -69,16 +69,16 @@ const About = () => {
               
               {/* Corner circles and labels */}
               {/* Fast - Top */}
-              <circle cx="200" cy="60" r="35" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
+              <circle cx="200" cy="60" r="45" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
               <text x="200" y="68" textAnchor="middle" fill="rgb(20, 184, 166)" fontSize="18" fontWeight="bold">Fast</text>
               
               {/* Cost-Effective - Bottom Right */}
-              <circle cx="340" cy="320" r="50" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
+              <circle cx="340" cy="320" r="45" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
               <text x="340" y="315" textAnchor="middle" fill="rgb(20, 184, 166)" fontSize="16" fontWeight="bold">Cost-</text>
               <text x="340" y="333" textAnchor="middle" fill="rgb(20, 184, 166)" fontSize="16" fontWeight="bold">Effective</text>
               
               {/* Quality - Bottom Left */}
-              <circle cx="60" cy="320" r="40" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
+              <circle cx="60" cy="320" r="45" fill="rgba(31, 41, 55, 0.9)" stroke="rgb(20, 184, 166)" strokeWidth="2" />
               <text x="60" y="328" textAnchor="middle" fill="rgb(20, 184, 166)" fontSize="18" fontWeight="bold">Quality</text>
               
               {/* Center - RapidEdge Solutions */}
