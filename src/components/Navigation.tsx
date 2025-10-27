@@ -31,7 +31,7 @@ const Navigation = () => {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {['Home', 'Services', 'Skills', 'About', 'Contact'].map((item) => (
+            {['Home', 'Services', 'About', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -55,7 +55,7 @@ const Navigation = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden mt-4 pb-4 animate-fade-in">
-            {['Home', 'Services', 'Skills', 'About', 'Contact'].map((item) => (
+            {['Home', 'Services', 'About', 'Contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
