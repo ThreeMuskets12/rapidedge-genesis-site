@@ -86,7 +86,8 @@ const Contact = () => {
             <div 
               className="calendly-inline-widget" 
               data-url="https://calendly.com/noah-rapidedge/30min"
-              style={{ minWidth: '320px', height: '700px' }}
+              data-resize="true"
+              style={{ width: '600px', height: '700px' }}
             />
           </div>
         </div>
