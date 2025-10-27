@@ -25,8 +25,8 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-start">
-          <div>
+        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-stretch">
+          <div className="flex flex-col">
             <div className="flex gap-8 items-start mb-8">
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -88,7 +88,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20">
+            <div className="p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20 flex-1 flex flex-col justify-center">
               <h4 className="text-lg font-semibold text-white mb-2">Free Consultation</h4>
               <p className="text-gray-300 text-sm mb-4">
                 Get expert advice on your project challenges and discover how we can help accelerate your development timeline.
