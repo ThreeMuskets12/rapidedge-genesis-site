@@ -50,7 +50,20 @@ const Services = () => {
       icon: Lightbulb,
       title: "Software",
       description: "End-to-end software development for embedded systems and control applications.",
-      features: ["Embedded Programming", "Firmware Development", "Control Algorithms", "System Integration"]
+      features: [
+        {
+          title: "Embedded Firmware",
+          description: "Whether you are prototyping on Arduinos, or using custom embedded systems, we produce clean, concise and documented C++ code. We use standard HALs on PlatformIO to make switching microcontrollers down the line a breeze. Own your code by having our development happen within your existing Git structure."
+        },
+        {
+          title: "Internal Tooling",
+          description: "Need small pieces of software for internal use in your company? Have it developed quickly and cost effectively in Python by focusing on functionality first and leveraging our existing code blocks for building simple UIs."
+        },
+        {
+          title: "End-User Software",
+          description: "Customer-facing software developed in-house. Interface with physical devices in an interface that matches your own brand guidelines. Work along side us by giving feedback along the way, ensuring that your user experience is exactly as you imagine."
+        }
+      ]
     }
   ];
 
