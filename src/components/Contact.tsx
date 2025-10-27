@@ -28,6 +28,19 @@ const Contact = () => {
             </div>
             
             <div className="mt-auto">
+            {/* Profile Section */}
+            <div className="flex flex-col items-center text-center space-y-6 mb-8">
+              <img 
+                src={noahHeadshot} 
+                alt="Noah Page" 
+                className="w-56 h-56 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+              />
+              <div>
+                <h3 className="text-3xl font-bold text-white mb-2">Noah Page</h3>
+                <p className="text-teal-400 font-semibold text-lg">Principal Engineering Consultant</p>
+              </div>
+            </div>
+
             <div className="flex gap-8 items-start mb-8">
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -72,19 +85,6 @@ const Contact = () => {
                       <div className="text-gray-300">Providence, RI</div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Profile Section */}
-              <div className="flex flex-col items-center text-center space-y-6">
-                <img 
-                  src={noahHeadshot} 
-                  alt="Noah Page" 
-                  className="w-56 h-56 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
-                />
-                <div>
-                  <h3 className="text-3xl font-bold text-white mb-2">Noah Page</h3>
-                  <p className="text-teal-400 font-semibold text-lg">Principal Engineering Consultant</p>
                 </div>
               </div>
             </div>
