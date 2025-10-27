@@ -33,11 +33,11 @@ const Contact = () => {
               <img 
                 src={noahHeadshot} 
                 alt="Noah Page" 
-                className="w-56 h-56 rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
+                className="w-[270px] h-[270px] rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
               />
               <div>
-                <h3 className="text-3xl font-bold text-white mb-2">Noah Page</h3>
-                <p className="text-teal-400 font-semibold text-lg">Principal Engineering Consultant</p>
+                <h3 className="text-4xl font-bold text-white mb-2">Noah Page</h3>
+                <p className="text-teal-400 font-semibold text-xl">Principal Engineering Consultant</p>
               </div>
             </div>
 
