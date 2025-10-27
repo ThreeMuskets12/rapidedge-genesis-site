@@ -7,7 +7,7 @@ const Services = () => {
     {
       icon: Cog,
       title: "Mechanical",
-      description: "Complete mechanical design and prototyping solutions from concept through manufacturing.",
+      description: "Whether your new startup idea needs proof-of-concept validation from sketches on the back of a napkin, or you have an existing engineering team and want bandwidth expansion / expertise to accelerate, or anywhere in between, we are here to help!",
       features: [
         {
           title: "3D CAD Design",
