@@ -7,7 +7,7 @@ const Services = () => {
     {
       icon: Cog,
       title: "Mechanical",
-      description: "Whether your new startup idea needs proof-of-concept validation from sketches on the back of a napkin, or you have an existing engineering team and want bandwidth expansion / expertise to accelerate, or anywhere in between, we are here to help!",
+      description: "Have sketches on the back of a napkin needing proof-of-concept validation? Have an existing engineering team needing bandwidth expansion?\n\nEngagements that meet you where you are.",
       features: [
         {
           title: "3D CAD Design",
