@@ -31,7 +31,20 @@ const Services = () => {
       icon: Cpu,
       title: "Electrical",
       description: "Full-service electrical design including PCB development and embedded systems integration.",
-      features: ["PCB Design & Layout", "Circuit Analysis", "Sensor Integration", "Power Systems"]
+      features: [
+        {
+          title: "Full Service Circuit Design",
+          description: "Go from a description of your desired functionality to a BOM and full schematics at lightning speed. In-house circuit blocks maximize use of pre-validated designs and reduce time to delivery."
+        },
+        {
+          title: "PCB Layout",
+          description: "Quickly get space and cost optimized PCBs designed and in your hands. Even existing schematics from your breadboard or protoboard proof-of-concept devices can quickly be transformed into professional PCBs."
+        },
+        {
+          title: "Embedded Upgrades",
+          description: "Currently using development platforms like Arduino or Raspberry Pi? Migrate to a custom embedded system to dramatically shrink your overall footprint, simply your build procedure, and reduce your COGS by only paying for the features you need, and not for the features you don't."
+        }
+      ]
     },
     {
       icon: Lightbulb,
