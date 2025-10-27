@@ -16,9 +16,20 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
+        {/* Get Started Header - Shows first on mobile, inline on desktop */}
+        <div className="mb-8 order-1 lg:hidden">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-teal-400">Get</span> Started
+          </h2>
+          <p className="text-xl text-gray-300 max-w-3xl">
+            Schedule a <strong className="font-bold">free 30 minute consultation</strong> to discuss your unique engineering challenges and learn more about solutions.
+          </p>
+        </div>
+
         <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-stretch">
-          <div className="flex flex-col h-full order-2 lg:order-1">
-            <div className="mb-8">
+          <div className="flex flex-col h-full order-3 lg:order-1">
+            {/* Get Started Header - Hidden on mobile, shows on desktop */}
+            <div className="mb-8 hidden lg:block">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-teal-400">Get</span> Started
               </h2>
@@ -27,7 +38,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="mt-auto">
+            <div className="mt-auto lg:mt-0">
             {/* Profile Section */}
             <div className="flex items-center gap-6 mb-8">
               <img 
@@ -91,7 +102,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px] order-1 lg:order-2">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2">
             <div className="flex items-center mb-4">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
