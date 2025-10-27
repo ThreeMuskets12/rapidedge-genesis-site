@@ -88,19 +88,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="p-6 bg-gradient-to-r from-teal-500/10 to-green-500/10 rounded-xl border border-teal-500/20">
-              <h4 className="text-lg font-semibold text-white mb-2">Free Consultation</h4>
-              <p className="text-gray-300 text-sm mb-4">
-                Get expert advice on your project challenges and discover how we can help accelerate your development timeline.
-              </p>
-              <ul className="text-sm text-gray-400 space-y-1">
-                <li>• 30-minute consultation call</li>
-                <li>• Project feasibility assessment</li>
-                <li>• Timeline and cost estimation</li>
-                <li>• Technology recommendations</li>
-              </ul>
-            </div>
             </div>
           </div>
 
