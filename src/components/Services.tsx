@@ -8,7 +8,24 @@ const Services = () => {
       icon: Cog,
       title: "Mechanical",
       description: "Complete mechanical design and prototyping solutions from concept through manufacturing.",
-      features: ["3D CAD Design", "Prototyping & Testing", "Design for Manufacturing", "CNC & 3D Printing"]
+      features: [
+        {
+          title: "3D CAD Design",
+          description: "From small one off parts to complex mechanical assemblies. Can be completed natively in your existing CAD software, making integration a breeze. (Solidworks, OnShape, Fusion360, Inventor, etc.)"
+        },
+        {
+          title: "CAM Programming",
+          description: "Quickly get GCode for cutting your prototype parts. Can also produce highly optimized toolpaths with custom macros for maximum manufacturing efficiency when every second counts."
+        },
+        {
+          title: "Manufacturing and Assembly Services",
+          description: "Don't let a lack of equipment slow you down. Receive fast quotes from both our in-house manufacturing for small quantity production, and from our experience with trusted manufacturers for ordering larger quantities."
+        },
+        {
+          title: "DFM Optimizations and Design Review",
+          description: "Work with us to convert your existing proof-of-concept prototype components into functional equivalents ready for medium or high volume manufacturing."
+        }
+      ]
     },
     {
       icon: Cpu,
@@ -50,11 +67,22 @@ const Services = () => {
                 {service.description}
               </p>
               
-              <ul className="space-y-2">
+              <ul className="space-y-4">
                 {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-400">
-                    <div className="w-2 h-2 bg-teal-400 rounded-full mr-3"></div>
-                    {feature}
+                  <li key={featureIndex} className="text-gray-400">
+                    <div className="flex items-start">
+                      <div className="w-2 h-2 bg-teal-400 rounded-full mr-3 mt-1.5 flex-shrink-0"></div>
+                      <div>
+                        <div className="font-semibold text-gray-200">
+                          {typeof feature === 'string' ? feature : feature.title}
+                        </div>
+                        {typeof feature === 'object' && feature.description && (
+                          <p className="text-sm text-gray-400 mt-1 leading-relaxed">
+                            {feature.description}
+                          </p>
+                        )}
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>
