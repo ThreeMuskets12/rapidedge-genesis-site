@@ -4,14 +4,49 @@ import { ArrowRight, Zap, Cpu } from 'lucide-react';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-10 w-32 h-32 bg-teal-500/10 rounded-full blur-xl animate-pulse"></div>
-        <div
-          className="absolute bottom-20 right-10 w-[36rem] h-[36rem] rounded-full opacity-100 animate-pulse delay-1000 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse at center, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 40%, transparent 70%)' }}
-        ></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-600/5 rounded-full blur-3xl animate-pulse delay-500"></div>
+      {/* PCB Background with Traces and Vias */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Pattern 1: Top-left - horizontal → diagonal → via */}
+        <div className="absolute top-20 left-10">
+          <div className="w-24 h-1 bg-teal-500/20 blur-sm animate-brightness-pulse"></div>
+          <div className="absolute top-0 left-24 w-16 h-1 bg-teal-400/20 blur-sm rotate-45 origin-left animate-brightness-pulse [animation-delay:200ms]"></div>
+          <div className="absolute top-[-4px] left-[135px] w-2 h-2 bg-teal-400/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:400ms]"></div>
+        </div>
+
+        {/* Pattern 2: Bottom-right - vertical → diagonal → horizontal */}
+        <div className="absolute bottom-32 right-20">
+          <div className="w-1 h-32 bg-green-500/20 blur-sm animate-brightness-pulse [animation-delay:300ms]"></div>
+          <div className="absolute bottom-0 left-0 w-20 h-1 bg-green-400/20 blur-sm -rotate-45 origin-left animate-brightness-pulse [animation-delay:500ms]"></div>
+          <div className="absolute bottom-[-4px] left-[56px] w-28 h-1 bg-green-500/20 blur-sm animate-brightness-pulse [animation-delay:700ms]"></div>
+        </div>
+
+        {/* Pattern 3: Top-right - diagonal → horizontal → via */}
+        <div className="absolute top-40 right-32">
+          <div className="w-20 h-1 bg-teal-600/20 blur-sm rotate-45 animate-brightness-pulse [animation-delay:100ms]"></div>
+          <div className="absolute top-[-4px] left-[56px] w-24 h-1 bg-teal-500/20 blur-sm animate-brightness-pulse [animation-delay:300ms]"></div>
+          <div className="absolute top-[-6px] left-[150px] w-3 h-3 bg-teal-400/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:500ms]"></div>
+        </div>
+
+        {/* Pattern 4: Center-left - horizontal → diagonal → vertical */}
+        <div className="absolute top-1/2 left-32 -translate-y-1/2">
+          <div className="w-20 h-1 bg-green-600/20 blur-sm animate-brightness-pulse [animation-delay:400ms]"></div>
+          <div className="absolute top-0 left-20 w-16 h-1 bg-green-500/20 blur-sm rotate-45 origin-left animate-brightness-pulse [animation-delay:600ms]"></div>
+          <div className="absolute top-[11px] left-[31px] w-1 h-24 bg-green-400/20 blur-sm animate-brightness-pulse [animation-delay:800ms]"></div>
+        </div>
+
+        {/* Pattern 5: Bottom-left - via → diagonal → horizontal */}
+        <div className="absolute bottom-40 left-[20%]">
+          <div className="w-2 h-2 bg-teal-500/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:200ms]"></div>
+          <div className="absolute top-0 left-2 w-20 h-1 bg-teal-400/20 blur-sm -rotate-45 origin-left animate-brightness-pulse [animation-delay:400ms]"></div>
+          <div className="absolute top-[14px] left-[16px] w-32 h-1 bg-teal-500/20 blur-sm animate-brightness-pulse [animation-delay:600ms]"></div>
+        </div>
+
+        {/* Pattern 6: Center-right - vertical → diagonal → via */}
+        <div className="absolute top-[40%] right-[15%]">
+          <div className="w-1 h-28 bg-green-500/20 blur-sm animate-brightness-pulse [animation-delay:500ms]"></div>
+          <div className="absolute bottom-0 left-0 w-16 h-1 bg-green-400/20 blur-sm rotate-45 origin-left animate-brightness-pulse [animation-delay:700ms]"></div>
+          <div className="absolute bottom-[-5px] left-[46px] w-2.5 h-2.5 bg-green-400/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:900ms]"></div>
+        </div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
