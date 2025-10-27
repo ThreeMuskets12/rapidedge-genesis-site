@@ -49,7 +49,7 @@ const Services = () => {
     {
       icon: Lightbulb,
       title: "Software",
-      description: "Meeting you where you are: Collaboration can begin from just high level ideas, to existing breadboard and Arduino prototypes, to custom embedded PCBs.",
+      description: "Have a vision for your device's functionality needing quick development? Have a vibe-coded proof-of-concept needing to be converted to the real deal?\n\nEngagements that meet you where you are.",
       features: [
         {
           title: "Embedded Firmware",
