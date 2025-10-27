@@ -42,7 +42,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="flex justify-center items-center">
+          <div className="flex flex-col justify-center items-center">
             <svg viewBox="0 0 400 400" className="w-full max-w-lg">
               {/* Triangle paths */}
               <defs>
@@ -85,6 +85,10 @@ const About = () => {
               <text x="200" y="228" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">RapidEdge</text>
               <text x="200" y="248" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Solutions</text>
             </svg>
+            
+            <p className="text-gray-300 text-center mt-8 max-w-2xl leading-relaxed">
+              It's not always a compromise. RapidEdge Solutions lets you cheat the engineering trilemma by cutting out the overhead stemming from cross-team collaboration. Spend your budget getting real solutions to real problems, instead of on meetings and workshops between Mechanical, Electrical, and Software for "Circling Back" and "Touching Base".
+            </p>
           </div>
         </div>
       </div>
