@@ -35,8 +35,8 @@ const Hero = () => {
             <em>Faster</em> Engineered Solutions Done <em>Right the First Time</em>
           </p>
           
-          <p className="text-lg text-gray-400 mb-12 max-w-[57.6rem] mx-auto animate-fade-in delay-300">
-            Save time and money by eliminating overhead from inter-disciplinary work. Mechanical, electrical, and software, done right - all under one roof.
+          <p className="text-lg text-gray-400 mb-12 max-w-[46rem] mx-auto animate-fade-in delay-300">
+            Save time and money by eliminating overhead from inter-disciplinary work. Mechanical, electrical, and software, done right - <strong>all under one roof</strong>.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">
