@@ -4,24 +4,14 @@ import { ArrowRight, Zap, Cpu } from 'lucide-react';
 const Hero = () => {
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Animated PCB Background Elements */}
-      <div className="absolute inset-0 opacity-40">
-        {/* PCB Traces - horizontal and vertical lines */}
-        <div className="absolute top-20 left-10 w-64 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent blur-sm animate-brightness-pulse"></div>
-        <div className="absolute top-40 left-32 w-1 h-48 bg-gradient-to-b from-transparent via-teal-400 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-60 right-20 w-80 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-40 w-1 h-64 bg-gradient-to-b from-transparent via-green-400 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-56 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '0.8s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-1 h-40 bg-gradient-to-b from-transparent via-green-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1.2s' }}></div>
-        
-        {/* PCB Vias - small circular pads */}
-        <div className="absolute top-24 left-12 w-8 h-8 bg-teal-500 rounded-full blur-md animate-brightness-pulse"></div>
-        <div className="absolute top-44 left-36 w-6 h-6 bg-teal-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.3s' }}></div>
-        <div className="absolute bottom-32 right-24 w-10 h-10 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.7s' }}></div>
-        <div className="absolute top-64 right-28 w-7 h-7 bg-green-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.3s' }}></div>
-        <div className="absolute bottom-48 left-48 w-9 h-9 bg-teal-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.8s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-6 h-6 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.6s' }}></div>
-        <div className="absolute bottom-1/4 left-1/4 w-8 h-8 bg-teal-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.1s' }}></div>
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-teal-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div
+          className="absolute bottom-20 right-10 w-[36rem] h-[36rem] rounded-full opacity-100 animate-pulse delay-1000 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at center, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 40%, transparent 70%)' }}
+        ></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-600/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
