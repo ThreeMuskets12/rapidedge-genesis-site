@@ -30,7 +30,7 @@ const Services = () => {
     {
       icon: Cpu,
       title: "Electrical",
-      description: "Full-service electrical design including PCB development and embedded systems integration.",
+      description: "Have high level ideas? Existing breadboard and Arduino prototypes? Already on a custom embedded PCB? Engagements that meet you where you are.",
       features: [
         {
           title: "Full Service Circuit Design",
