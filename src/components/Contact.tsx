@@ -25,7 +25,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div>
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
@@ -85,9 +85,9 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="space-y-8">
             {/* Profile Section */}
-            <div className="flex flex-col items-center text-center space-y-4 bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+            <div className="flex flex-col items-center text-center space-y-4">
               <img 
                 src={noahHeadshot} 
                 alt="Noah Page" 
@@ -113,7 +113,7 @@ const Contact = () => {
                 className="calendly-inline-widget" 
                 data-url="https://calendly.com/noah-rapidedge/30min"
                 data-resize="true"
-                style={{ minWidth: '320px', height: '700px' }}
+                style={{ width: '384px', height: '448px' }}
               />
             </div>
           </div>
