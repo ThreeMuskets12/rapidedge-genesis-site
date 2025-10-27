@@ -49,7 +49,13 @@ const Services = () => {
     {
       icon: Lightbulb,
       title: "Software",
-      description: "Have a vision for your device's functionality needing quick development? Have a vibe-coded proof-of-concept needing to be converted to the real deal?\n\nEngagements that meet you where you are.",
+      description: (
+        <>
+          Have a vision for your device&apos;s functionality needing quick development? Have a vibe-coded proof-of-concept needing to be transformed into the real deal?
+          <br /><br />
+          <strong>Engagements that meet you where you are.</strong>
+        </>
+      ),
       features: [
         {
           title: "Embedded Firmware",
