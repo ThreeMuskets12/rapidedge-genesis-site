@@ -6,22 +6,35 @@ const Hero = () => {
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Animated PCB Background Elements */}
       <div className="absolute inset-0 opacity-40">
-        {/* PCB Traces - horizontal and vertical lines */}
-        <div className="absolute top-20 left-10 w-64 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent blur-sm animate-brightness-pulse"></div>
-        <div className="absolute top-40 left-32 w-1 h-48 bg-gradient-to-b from-transparent via-teal-400 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-60 right-20 w-80 h-1 bg-gradient-to-r from-transparent via-green-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-40 w-1 h-64 bg-gradient-to-b from-transparent via-green-400 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-56 h-1 bg-gradient-to-r from-transparent via-teal-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '0.8s' }}></div>
-        <div className="absolute bottom-1/3 left-1/3 w-1 h-40 bg-gradient-to-b from-transparent via-green-500 to-transparent blur-sm animate-brightness-pulse" style={{ animationDelay: '1.2s' }}></div>
-        
-        {/* PCB Vias - small circular pads */}
+        {/* PCB Pattern 1: Top-left area */}
         <div className="absolute top-24 left-12 w-8 h-8 bg-teal-500 rounded-full blur-md animate-brightness-pulse"></div>
-        <div className="absolute top-44 left-36 w-6 h-6 bg-teal-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.3s' }}></div>
-        <div className="absolute bottom-32 right-24 w-10 h-10 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.7s' }}></div>
-        <div className="absolute top-64 right-28 w-7 h-7 bg-green-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.3s' }}></div>
-        <div className="absolute bottom-48 left-48 w-9 h-9 bg-teal-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.8s' }}></div>
-        <div className="absolute top-1/2 right-1/3 w-6 h-6 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.6s' }}></div>
-        <div className="absolute bottom-1/4 left-1/4 w-8 h-8 bg-teal-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.1s' }}></div>
+        <div className="absolute top-28 left-16 w-48 h-1 bg-gradient-to-r from-teal-500 via-teal-500 to-teal-400 blur-sm animate-brightness-pulse"></div>
+        <div className="absolute top-28 left-64 w-1 h-32 bg-gradient-to-b from-teal-400 to-teal-500 blur-sm animate-brightness-pulse"></div>
+        <div className="absolute top-60 left-64 w-6 h-6 bg-teal-500 rounded-full blur-md animate-brightness-pulse"></div>
+        
+        {/* PCB Pattern 2: Top-right area */}
+        <div className="absolute top-64 right-28 w-7 h-7 bg-green-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-68 right-32 w-1 h-40 bg-gradient-to-b from-green-400 to-green-500 blur-sm animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[270px] right-32 w-56 h-1 bg-gradient-to-l from-green-500 via-green-500 to-green-400 blur-sm animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[266px] right-[240px] w-8 h-8 bg-green-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.5s' }}></div>
+        
+        {/* PCB Pattern 3: Bottom-left area - L-shaped */}
+        <div className="absolute bottom-48 left-48 w-9 h-9 bg-teal-400 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-52 left-52 w-64 h-1 bg-gradient-to-r from-teal-400 to-teal-500 blur-sm animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-52 left-[320px] w-1 h-48 bg-gradient-to-t from-teal-500 to-green-500 blur-sm animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-[400px] left-[316px] w-6 h-6 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1s' }}></div>
+        
+        {/* PCB Pattern 4: Bottom-right area - diagonal */}
+        <div className="absolute bottom-32 right-24 w-10 h-10 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-36 right-28 w-40 h-1 bg-gradient-to-l from-green-500 to-green-400 blur-sm animate-brightness-pulse rotate-45 origin-right" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-[200px] right-[140px] w-1 h-32 bg-gradient-to-b from-green-400 to-teal-500 blur-sm animate-brightness-pulse" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-[200px] right-[136px] w-8 h-8 bg-teal-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '1.5s' }}></div>
+        
+        {/* PCB Pattern 5: Center area - horizontal to vertical */}
+        <div className="absolute top-1/2 left-1/4 w-7 h-7 bg-teal-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.7s' }}></div>
+        <div className="absolute top-1/2 left-1/4 w-44 h-1 bg-gradient-to-r from-teal-500 to-green-400 blur-sm animate-brightness-pulse translate-y-[-50%]" style={{ animationDelay: '0.7s' }}></div>
+        <div className="absolute top-1/2 left-[calc(25%+176px)] w-1 h-24 bg-gradient-to-b from-green-400 to-green-500 blur-sm animate-brightness-pulse" style={{ animationDelay: '0.7s' }}></div>
+        <div className="absolute top-[calc(50%+96px)] left-[calc(25%+172px)] w-6 h-6 bg-green-500 rounded-full blur-md animate-brightness-pulse" style={{ animationDelay: '0.7s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
