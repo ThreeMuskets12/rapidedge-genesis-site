@@ -57,7 +57,7 @@ const Services = () => {
       title: "Software",
       description: (
         <>
-          Have a vision for your device&apos;s functionality needing quick development? Have a vibe-coded proof-of-concept needing to be transformed into the real deal?
+          Have a hardware prototype needing firmware to bring it to life? Have a vibe-coded proof-of-concept needing to be transformed into the real deal?
           <br /><br />
           <strong>Engagements that meet you where you are.</strong>
         </>
