@@ -12,14 +12,7 @@ const About = () => {
               <span className="text-teal-400">About</span> RapidEdge
             </h2>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              RapidEdge Solutions is a cutting-edge engineering consulting firm specializing in rapid prototyping 
-              and product development with a particular focus on life science instrumentation. We bridge the gap 
-              between innovative concepts and market-ready products.
-            </p>
-            <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-              Our multidisciplinary approach combines mechanical design, electronics, software development, 
-              and manufacturing expertise to deliver comprehensive solutions that accelerate time-to-market 
-              while maintaining the highest quality standards.
+              It's not always a compromise. RapidEdge Solutions lets you cheat the engineering trilemma by cutting out the overhead stemming from cross-team collaboration. Spend your budget getting real solutions to real problems, instead of on meetings and workshops between Mechanical, Electrical, and Software for "Circling Back" and "Touching Base".
             </p>
             
             <div className="space-y-4">
@@ -85,10 +78,6 @@ const About = () => {
               <text x="200" y="228" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">RapidEdge</text>
               <text x="200" y="248" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Solutions</text>
             </svg>
-            
-            <p className="text-gray-300 text-center mt-8 max-w-2xl leading-relaxed">
-              It's not always a compromise. RapidEdge Solutions lets you cheat the engineering trilemma by cutting out the overhead stemming from cross-team collaboration. Spend your budget getting real solutions to real problems, instead of on meetings and workshops between Mechanical, Electrical, and Software for "Circling Back" and "Touching Base".
-            </p>
           </div>
         </div>
       </div>
