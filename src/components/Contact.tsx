@@ -26,7 +26,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <div className="text-gray-300">contact@rapidedgesolutions.com</div>
+                  <div className="text-gray-300">noah@rapidedge.solutions</div>
                 </div>
               </div>
               
@@ -36,7 +36,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Phone</div>
-                  <div className="text-gray-300">+1 (555) 123-4567</div>
+                  <div className="text-gray-300">+1 (518) 313-9009</div>
                 </div>
               </div>
               
@@ -46,7 +46,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-white font-semibold">Location</div>
-                  <div className="text-gray-300">San Francisco Bay Area, CA</div>
+                  <div className="text-gray-300">Providence, RI</div>
                 </div>
               </div>
             </div>
