@@ -104,7 +104,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-md">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px]">
             <div className="flex items-center mb-4">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
@@ -116,7 +116,7 @@ const Contact = () => {
             <div 
               className="calendly-inline-widget" 
               data-url="https://calendly.com/noah-rapidedge/30min"
-              style={{ width: '400px', height: '900px' }}
+              style={{ width: '560px', height: '900px' }}
             />
           </div>
         </div>
