@@ -35,7 +35,7 @@ const Hero = () => {
             <em>Faster</em> Engineered Solutions Done <em>Right the First Time</em>
           </p>
           
-          <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto animate-fade-in delay-300">
+          <p className="text-lg text-gray-400 mb-12 max-w-[57.6rem] mx-auto animate-fade-in delay-300">
             Save time and money by eliminating management and communication overhead from inter-discipline collaboration. Mechanical, electrical, and software engineering done right, by the same team.
           </p>
           
