@@ -4,20 +4,29 @@ import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isInServices, setIsInServices] = useState(false);
+  const [isInContentSection, setIsInContentSection] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
-      // Check if we're in the services section
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        const rect = servicesSection.getBoundingClientRect();
-        const isVisible = rect.top <= 100 && rect.bottom >= 0;
-        setIsInServices(isVisible);
+      // Check if we're in services, about, or contact sections
+      const sections = ['services', 'about', 'contact'];
+      let inSection = false;
+      
+      for (const sectionId of sections) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 0) {
+            inSection = true;
+            break;
+          }
+        }
       }
+      
+      setIsInContentSection(inSection);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -30,7 +39,7 @@ const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-100 ${
-      isInServices ? 'bg-gray-900/90 backdrop-blur-md shadow-lg' : isScrolled ? 'bg-gray-900/98 shadow-lg' : 'bg-transparent'
+      isInContentSection ? 'bg-gray-900/80 backdrop-blur-md shadow-lg' : isScrolled ? 'bg-gray-900/98 shadow-lg' : 'bg-transparent'
     }`}>
       <div className="container mx-auto max-w-7xl px-6 py-4">
         <div className="flex items-center justify-between">
