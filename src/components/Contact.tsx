@@ -17,7 +17,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-stretch">
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-full order-2 lg:order-1">
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-teal-400">Get</span> Started
@@ -91,7 +91,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px]">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px] order-1 lg:order-2">
             <div className="flex items-center mb-4">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
