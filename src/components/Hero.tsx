@@ -16,10 +16,10 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto">
           {/* Animated Icons */}
           <div className="flex justify-center mb-8 space-x-8">
-            <div className="p-3 bg-teal-500/20 rounded-full animate-bounce delay-100">
+            <div className="p-3 bg-teal-500/20 rounded-full animate-bounce [animation-delay:100ms] will-change-transform">
               <Zap className="w-8 h-8 text-teal-400" />
             </div>
-            <div className="p-3 bg-green-500/20 rounded-full animate-bounce delay-300">
+            <div className="p-3 bg-green-500/20 rounded-full animate-bounce [animation-delay:300ms] will-change-transform">
               <Cpu className="w-8 h-8 text-green-400" />
             </div>
           </div>
@@ -61,9 +61,9 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce will-change-transform">
         <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse"></div>
+          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-pulse will-change-transform"></div>
         </div>
       </div>
     </section>
