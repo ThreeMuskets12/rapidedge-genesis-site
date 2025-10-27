@@ -9,7 +9,7 @@ const Services = () => {
       title: "Mechanical",
       description: (
         <>
-          Have back-of-the-napkin sketches for needing proof-of-concept validation for your startup? Have an existing prototype needing help transferring to production?
+          Have back-of-the-napkin sketches for needing proof-of-concept validation for your startup? Have an existing prototype needing to be transferred to production?
           <br /><br />
           <strong>Engagements that meet you where you are.</strong>
         </>
