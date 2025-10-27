@@ -12,27 +12,8 @@ const About = () => {
               <span className="text-teal-400">About</span> RapidEdge
             </h2>
             <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-              It's not always a compromise. RapidEdge Solutions lets you cheat the engineering trilemma by cutting out the overhead stemming from cross-team collaboration. Spend your budget getting real solutions to real problems, instead of on meetings and workshops between Mechanical, Electrical, and Software for "Circling Back" and "Touching Base".
+              It doesn't always have to be a compromise. RapidEdge Solutions cheats the engineering trilemma by cutting out the overhead from cross-team collaboration. Maximize your budget on getting fast and effective solutions, instead of on meetings and workshops between Mechanical, Electrical, and Software teams for "Circling Back" and "Touching Base".
             </p>
-            
-            <div className="space-y-4">
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-teal-400 rounded-full mr-4"></div>
-                <span className="text-gray-300">FDA-compliant medical device experience</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-teal-400 rounded-full mr-4"></div>
-                <span className="text-gray-300">Rapid iteration and agile development methods</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-teal-400 rounded-full mr-4"></div>
-                <span className="text-gray-300">End-to-end product development lifecycle</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-3 h-3 bg-teal-400 rounded-full mr-4"></div>
-                <span className="text-gray-300">Industry 4.0 and IoT integration expertise</span>
-              </div>
-            </div>
           </div>
 
           <div className="flex flex-col justify-center items-center">
