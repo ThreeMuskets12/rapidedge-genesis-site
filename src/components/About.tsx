@@ -113,16 +113,7 @@ const About = () => {
               
               {/* Center - RapidEdge Solutions with 3D effect */}
               <circle cx="203" cy="236" r="60" fill="rgba(0, 0, 0, 0.3)" stroke="none" />
-              <circle cx="200" cy="233" r="60" fill="rgba(20, 184, 166, 0.25)" stroke="url(#strokeGradient)" strokeWidth="3">
-                <animate 
-                  attributeName="r" 
-                  from="60" 
-                  to="63" 
-                  dur="2s" 
-                  repeatCount="indefinite"
-                  direction="alternate"
-                />
-              </circle>
+              <circle cx="200" cy="233" r="60" fill="rgba(20, 184, 166, 0.25)" stroke="url(#strokeGradient)" strokeWidth="3" />
               <text x="200" y="228" textAnchor="middle" fill="white" fontSize="18" fontWeight="bold">RapidEdge</text>
               <text x="200" y="248" textAnchor="middle" fill="white" fontSize="16" fontWeight="bold">Solutions</text>
             </svg>
