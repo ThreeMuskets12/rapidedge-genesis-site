@@ -10,7 +10,7 @@ const Hero = () => {
         <div className="absolute top-20 left-10">
           <div className="w-24 h-1 bg-teal-500/20 blur-sm animate-brightness-pulse"></div>
           <div className="absolute top-0 left-24 w-16 h-1 bg-teal-400/20 blur-sm rotate-45 origin-left animate-brightness-pulse [animation-delay:200ms]"></div>
-          <div className="absolute top-[-10px] left-[127px] w-6 h-6 bg-teal-400/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:400ms]"></div>
+          <div className="absolute top-[-57px] left-[129px] w-6 h-6 bg-teal-400/30 rounded-full blur-sm animate-brightness-pulse [animation-delay:400ms]"></div>
         </div>
 
         {/* Pattern 2: Bottom-right - vertical → diagonal → horizontal */}
