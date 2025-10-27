@@ -8,8 +8,8 @@ const Hero = () => {
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-32 h-32 bg-teal-500/10 rounded-full blur-xl animate-pulse"></div>
         <div
-          className="absolute bottom-20 right-10 w-[36rem] h-[36rem] rounded-full opacity-70 animate-pulse delay-1000 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse at center, hsl(var(--primary) / 0.18) 0%, transparent 60%)' }}
+          className="absolute bottom-20 right-10 w-[36rem] h-[36rem] rounded-full opacity-100 animate-pulse delay-1000 pointer-events-none"
+          style={{ background: 'radial-gradient(ellipse at center, rgba(34, 197, 94, 0.2) 0%, rgba(34, 197, 94, 0.05) 40%, transparent 70%)' }}
         ></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-teal-600/5 rounded-full blur-3xl animate-pulse delay-500"></div>
       </div>
