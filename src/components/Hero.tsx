@@ -36,7 +36,7 @@ const Hero = () => {
           </p>
           
           <p className="text-lg text-gray-400 mb-12 max-w-[57.6rem] mx-auto animate-fade-in delay-300">
-            Save time and money by eliminating management and communication overhead from inter-discipline collaboration. Mechanical, electrical, and software engineering done right, by the same team.
+            Save time and money by eliminating overhead from inter-disciplinary work. Mechanical, electrical, and software, done right - all under one roof.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-500">
