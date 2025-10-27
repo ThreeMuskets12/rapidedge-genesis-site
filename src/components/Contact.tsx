@@ -17,7 +17,7 @@ const Contact = () => {
     <section id="contact" className="py-20 bg-gray-900">
       <div className="container mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-start">
-          <div>
+          <div className="flex flex-col">
             <div className="mb-8">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 <span className="text-teal-400">Get</span> Started
@@ -26,6 +26,8 @@ const Contact = () => {
                 Ready to accelerate your project? Schedule a free consultation to discuss your engineering challenges and explore solutions.
               </p>
             </div>
+            
+            <div className="mt-auto">
             <div className="flex gap-8 items-start mb-8">
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
@@ -98,6 +100,7 @@ const Contact = () => {
                 <li>• Timeline and cost estimation</li>
                 <li>• Technology recommendations</li>
               </ul>
+            </div>
             </div>
           </div>
 
