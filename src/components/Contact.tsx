@@ -29,35 +29,35 @@ const Contact = () => {
             <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
             
             <div className="space-y-6">
-              <div className="flex items-center">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+              <a href="mailto:noah@rapidedge.solutions" className="flex items-center group">
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
                   <Mail className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">Email</div>
-                  <a href="mailto:noah@rapidedge.solutions" className="text-gray-300 hover:text-teal-400 transition-colors">noah@rapidedge.solutions</a>
+                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah@rapidedge.solutions</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+              <a href="tel:+15183139009" className="flex items-center group">
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
                   <Phone className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">Phone</div>
-                  <a href="tel:+15183139009" className="text-gray-300 hover:text-teal-400 transition-colors">+1 (518) 313-9009</a>
+                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">+1 (518) 313-9009</div>
                 </div>
-              </div>
+              </a>
               
-              <div className="flex items-center">
-                <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
+              <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
+                <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
                   <Linkedin className="w-6 h-6 text-teal-400" />
                 </div>
                 <div>
                   <div className="text-white font-semibold">LinkedIn</div>
-                  <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-teal-400 transition-colors">noah-page</a>
+                  <div className="text-gray-300 group-hover:text-teal-400 transition-colors">noah-page</div>
                 </div>
-              </div>
+              </a>
               
               <div className="flex items-center">
                 <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
