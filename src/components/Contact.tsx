@@ -25,7 +25,7 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-start">
+        <div className="grid lg:grid-cols-[1fr,auto] gap-8 items-end">
           <div>
             <div className="flex gap-8 items-start mb-8">
               <div className="flex-1">
