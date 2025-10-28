@@ -40,13 +40,13 @@ const Contact = () => {
             
             <div className="lg:mt-auto">
             {/* Profile Section */}
-            <div className="flex items-center gap-6 mb-8">
+            <div className="flex flex-col md:flex-row items-center md:items-center gap-6 mb-8">
               <img 
                 src={noahHeadshot} 
                 alt="Noah Page" 
                 className="w-[270px] h-[270px] rounded-full object-cover border-4 border-teal-500/30 shadow-lg"
               />
-              <div>
+              <div className="text-center md:text-left">
                 <h3 className="text-4xl font-bold text-white mb-2">Noah Page</h3>
                 <p className="text-teal-400 font-semibold text-xl">Principal Engineering Consultant</p>
               </div>
