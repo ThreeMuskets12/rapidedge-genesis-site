@@ -38,7 +38,7 @@ const Contact = () => {
               </p>
             </div>
             
-            <div className="mt-auto lg:mt-0">
+            <div className="lg:mt-auto">
             {/* Profile Section */}
             <div className="flex items-center gap-6 mb-8">
               <img 
