@@ -34,7 +34,7 @@ jobs:
           BASE_PATH: /${{ github.event.repository.name }}/
         run: |
           # Insert a base path before the plugins line for GitHub Pages build only
-          sed -i "/plugins:/i\\  base: process.env.BASE_PATH," vite.config.ts
+          sed -i "/plugins:/i\\  base: '${BASE_PATH}'," vite.config.ts
           npm run build
 
       - name: Upload artifact
