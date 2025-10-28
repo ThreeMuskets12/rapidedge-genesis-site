@@ -102,8 +102,8 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2">
-            <div className="flex items-center mb-4">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-3 md:p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2 flex flex-col items-center">
+            <div className="flex items-center mb-4 w-full">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
               </div>
