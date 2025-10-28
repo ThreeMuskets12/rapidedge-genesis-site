@@ -35,7 +35,7 @@ jobs:
       - name: Build for GitHub Pages
         run: |
           REPO_NAME=$(basename $GITHUB_REPOSITORY)
-          echo "import { defineConfig } from 'vite'; import originalConfig from './vite.config'; export default defineConfig(({ mode }) => { const config = typeof originalConfig === 'function' ? originalConfig({ mode }) : originalConfig; return { ...config, base: '/$REPO_NAME/' }; });" > vite.config.ghpages.ts
+          echo "import { defineConfig } from 'vite'; import originalConfig from './vite.config'; export default defineConfig(({ mode }) => { const config = typeof originalConfig === 'function' ? originalConfig({ mode }) : originalConfig; return { ...config, base: '/' }; });" > vite.config.ghpages.ts
           npm run build -- --config vite.config.ghpages.ts
 
       # Step 6: Restore original App.tsx
