@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Microscope, Cog, Cpu, Lightbulb } from 'lucide-react';
+import { Microscope, Cog, Cpu, Code2 } from 'lucide-react';
 
 const Services = () => {
   const services = [
@@ -59,7 +59,7 @@ const Services = () => {
       ]
     },
     {
-      icon: Lightbulb,
+      icon: Code2,
       title: "Software",
       description: (
         <>
