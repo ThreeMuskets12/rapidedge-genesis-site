@@ -107,7 +107,7 @@ const Contact = () => {
               <div className="md:static absolute left-3 p-2 bg-teal-500/20 rounded-lg md:mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
               </div>
-              <h3 className="text-xl font-bold text-white">Schedule Consultation</h3>
+              <h3 className="text-xl font-bold text-white ml-2 md:ml-0">Schedule Consultation</h3>
             </div>
             
             {/* Calendly Embed */}
