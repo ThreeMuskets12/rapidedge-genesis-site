@@ -42,6 +42,10 @@ jobs:
       - name: Restore /src/App.tsx
         run: mv src/App.tsx.bak src/App.tsx
 
+      # Step 6.5: Add CNAME
+      - name: Add CNAME for custom domain
+        run: echo "rapidedge.solutions" > dist/CNAME
+
       # Step 7: Deploy to GitHub Pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
