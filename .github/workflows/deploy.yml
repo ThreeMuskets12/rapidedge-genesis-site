@@ -2,81 +2,49 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+    branches:
+      - main  # deploy on pushes to main
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      # Step 1: Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      # Step 2: Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
-          cache: 'npm'
+          node-version: '18'
 
+      # Step 3: Install dependencies
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site for GitHub Pages
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
+      # Step 4: Patch App.tsx for GitHub Pages
+      - name: Patch /src/App.tsx for BrowserRouter basename
         run: |
-          set -euo pipefail
+          cp src/App.tsx src/App.tsx.bak
+          sed -E "s|<BrowserRouter>|<BrowserRouter basename={import.meta.env.BASE_URL}>|" src/App.tsx > src/App.temp.tsx
+          mv src/App.temp.tsx src/App.tsx
 
-          echo ">>> Injecting Vite base path (literal) for GH Pages build"
-          # Insert the literal base path before the plugins: line in vite.config.ts
-          sed -i "/plugins:/i\\  base: '${BASE_PATH}'," vite.config.ts
+      # Step 5: Build project with dynamic Vite base
+      - name: Build for GitHub Pages
+        run: |
+          echo "import { defineConfig } from 'vite'; import config from './vite.config'; export default defineConfig({ ...config, base: '/${{ github.repository }}' });" > vite.config.ghpages.ts
+          npm run build -- --config vite.config.ghpages.ts
 
-          echo ">>> Patching src/main.tsx to use BrowserRouter with import.meta.env.BASE_URL (CI-only edit)"
+      # Step 6: Restore original App.tsx
+      - name: Restore /src/App.tsx
+        run: mv src/App.tsx.bak src/App.tsx
 
-          # Add BrowserRouter import if missing (single-line append to avoid multi-line quoting issues)
-          if ! grep -q "BrowserRouter" src/main.tsx; then
-            sed -i "/import '.\/index.css'/a import { BrowserRouter } from 'react-router-dom'" src/main.tsx
-            echo "Inserted BrowserRouter import"
-          else
-            echo "BrowserRouter import already present; skipping insert"
-          fi
-
-          # Wrap the render call with BrowserRouter basename={import.meta.env.BASE_URL || '/'}
-          # Use '@' as sed delimiter so the '||' inside the replacement doesn't break the command
-          if grep -q "createRoot(document.getElementById(\"root\")!).render(<App />);" src/main.tsx && ! grep -q "BrowserRouter.*basename" src/main.tsx; then
-            sed -i "s@createRoot(document.getElementById(\"root\")!).render(<App />);@createRoot(document.getElementById(\"root\")!).render(<BrowserRouter basename={import.meta.env.BASE_URL || '/'}><App /></BrowserRouter>);@g" src/main.tsx
-            echo "Wrapped <App /> with <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>"
-          else
-            echo "Render already wrapped or pattern not found; skipping render replacement"
-          fi
-
-          echo "---- src/main.tsx (head) ----"
-          sed -n '1,120p' src/main.tsx || true
-          echo "-----------------------------"
-
-          npm run build
-
-          echo "---- dist/index.html (head) ----"
-          sed -n '1,120p' dist/index.html || true
-          echo "---------------------------------"
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      # Step 7: Deploy to GitHub Pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v7
         with:
-          path: dist
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
 
