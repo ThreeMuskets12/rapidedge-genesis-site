@@ -103,7 +103,7 @@ const Contact = () => {
           </div>
 
           <div className="bg-gray-800/80 backdrop-blur-sm p-0 md:p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2 flex flex-col items-center mx-auto w-fit md:w-auto">
-            <div className="relative flex items-center justify-center md:justify-start mb-4 w-full p-3 md:p-0">
+            <div className="relative flex items-center justify-center md:justify-start mb-4 w-full pt-4 px-3 pb-0 md:p-0">
               <div className="md:static absolute left-3 p-2 bg-teal-500/20 rounded-lg md:mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
               </div>
