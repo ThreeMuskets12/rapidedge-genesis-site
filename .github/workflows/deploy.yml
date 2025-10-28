@@ -34,7 +34,7 @@ jobs:
       # Step 5: Build project with dynamic Vite base
       - name: Build for GitHub Pages
         run: |
-          echo "import { defineConfig } from 'vite'; import config from './vite.config'; export default defineConfig({ ...config, base: '/${{ github.repository }}' });" > vite.config.ghpages.ts
+	  echo "import { defineConfig } from 'vite'; import originalConfig from './vite.config'; export default defineConfig(({ mode }) => { const config = typeof originalConfig === 'function' ? originalConfig({ mode }) : originalConfig; return { ...config, base: '/${{ github.repository }}' }; });" > vite.config.ghpages.ts
           npm run build -- --config vite.config.ghpages.ts
 
       # Step 6: Restore original App.tsx
