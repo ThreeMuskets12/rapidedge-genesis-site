@@ -1,98 +1,94 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [ main ]
+push:
+branches: [ main ]
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+contents: read
+pages: write
+id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+group: "pages"
+cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout repository
+uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
+```
+  - name: Set up Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: 20
+      cache: 'npm'
 
-      - name: Install dependencies
-        run: npm ci
+  - name: Install dependencies
+    run: npm ci
 
-      - name: Build site for GitHub Pages
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
-        run: |
-                - name: Build site for GitHub Pages
-        env:
-          BASE_PATH: /${{ github.event.repository.name }}/
-        run: |
-          set -euo pipefail
+  - name: Build site for GitHub Pages
+    env:
+      BASE_PATH: /${{ github.event.repository.name }}/
+    run: |
+      set -euo pipefail
 
-          echo ">>> Injecting Vite base path (literal) for GH Pages build"
-          # Insert the literal base path before plugins: (idempotent: will insert another line if you run it twice;
-          # CI checkout is fresh so it's fine; optionally you can restore later from git if you'd like)
-          sed -i "/plugins:/i\\  base: '${BASE_PATH}'," vite.config.ts
+      echo ">>> Injecting Vite base path (literal) for GH Pages build"
+      # Insert the literal base path before the plugins: line in vite.config.ts
+      # This will write a line like: base: '/your-repo-name/',
+      # It is safe because CI runs on a fresh checkout.
+      sed -i "/plugins:/i\\  base: '${BASE_PATH}'," vite.config.ts
 
-          echo ">>> Patching src/main.tsx to use BrowserRouter with import.meta.env.BASE_URL (CI-only edit)"
+      echo ">>> Patching src/main.tsx to use BrowserRouter with import.meta.env.BASE_URL (CI-only edit)"
 
-          # only add the BrowserRouter import if it's not already present
-          if ! grep -q "BrowserRouter" src/main.tsx; then
-            sed -i "/import '.\/index.css'/a\\
+      # Add BrowserRouter import if missing
+      if ! grep -q "BrowserRouter" src/main.tsx; then
+        sed -i "/import '.\/index.css'/a\\
+```
+
 import { BrowserRouter } from 'react-router-dom'
 " src/main.tsx
-            echo "Inserted BrowserRouter import"
-          else
-            echo "BrowserRouter import already present; skipping insert"
-          fi
+echo "Inserted BrowserRouter import"
+else
+echo "BrowserRouter import already present; skipping insert"
+fi
 
-          # Replace the simple render(<App />) with a BrowserRouter-wrapped render.
-          # This substitution expects the exact original pattern used in your file:
-          # createRoot(document.getElementById("root")!).render(<App />);
-          # It is written to be idempotent (will not wrap twice if already wrapped).
-          if grep -q "render(<App />)" src/main.tsx && ! grep -q "BrowserRouter.*basename" src/main.tsx; then
-            sed -i "s|createRoot(document.getElementById(\"root\")!).render(<App />);|createRoot(document.getElementById(\"root\")!).render(<BrowserRouter basename={import.meta.env.BASE_URL || '/'}><App /></BrowserRouter>);|" src/main.tsx
-            echo "Wrapped <App /> with <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>"
-          else
-            echo "Render already wrapped or pattern not found; skipping render replacement"
-          fi
+```
+      # Wrap the render call with BrowserRouter basename={import.meta.env.BASE_URL || '/'}
+      if grep -q "createRoot(document.getElementById(\"root\")!).render(<App />);" src/main.tsx && ! grep -q "BrowserRouter.*basename" src/main.tsx; then
+        sed -i "s|createRoot(document.getElementById(\"root\")!).render(<App />);|createRoot(document.getElementById(\"root\")!).render(<BrowserRouter basename={import.meta.env.BASE_URL || '/'}><App /></BrowserRouter>);|" src/main.tsx
+        echo "Wrapped <App /> with <BrowserRouter basename={import.meta.env.BASE_URL || '/'}>"
+      else
+        echo "Render already wrapped or pattern not found; skipping render replacement"
+      fi
 
-          # Optional: show the modified file head so you can verify in Actions log
-          echo "---- src/main.tsx (head) ----"
-          sed -n '1,120p' src/main.tsx || true
-          echo "-----------------------------"
+      echo "---- src/main.tsx (head) ----"
+      sed -n '1,120p' src/main.tsx || true
+      echo "-----------------------------"
 
-          # Build
-          npm run build
+      npm run build
 
-          # Debug: show dist/index.html head to verify asset paths use the repo base
-          echo "---- dist/index.html (head) ----"
-          sed -n '1,120p' dist/index.html || true
-          echo "---------------------------------"
+      echo "---- dist/index.html (head) ----"
+      sed -n '1,120p' dist/index.html || true
+      echo "---------------------------------"
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist
+  - name: Upload artifact
+    uses: actions/upload-pages-artifact@v3
+    with:
+      path: dist
+```
 
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+deploy:
+needs: build
+runs-on: ubuntu-latest
+environment:
+name: github-pages
+url: ${{ steps.deployment.outputs.page_url }}
+steps:
+- name: Deploy to GitHub Pages
+id: deployment
+uses: actions/deploy-pages@v4
 
