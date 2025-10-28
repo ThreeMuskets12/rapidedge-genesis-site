@@ -121,13 +121,13 @@ export default {
 						transform: 'translate(0, 0)'
 					},
 					'25%': {
-						transform: 'translate(30px, -20px)'
+						transform: 'translate(80px, -60px)'
 					},
 					'50%': {
-						transform: 'translate(-20px, 30px)'
+						transform: 'translate(-70px, 90px)'
 					},
 					'75%': {
-						transform: 'translate(20px, 20px)'
+						transform: 'translate(60px, 70px)'
 					}
 				},
 				'float-2': {
@@ -135,10 +135,10 @@ export default {
 						transform: 'translate(0, 0)'
 					},
 					'33%': {
-						transform: 'translate(-40px, -30px)'
+						transform: 'translate(-100px, -80px)'
 					},
 					'66%': {
-						transform: 'translate(40px, 30px)'
+						transform: 'translate(100px, 80px)'
 					}
 				},
 				'float-3': {
@@ -146,13 +146,13 @@ export default {
 						transform: 'translate(0, 0)'
 					},
 					'25%': {
-						transform: 'translate(-25px, 35px)'
+						transform: 'translate(-90px, 100px)'
 					},
 					'50%': {
-						transform: 'translate(35px, -25px)'
+						transform: 'translate(100px, -90px)'
 					},
 					'75%': {
-						transform: 'translate(-30px, -30px)'
+						transform: 'translate(-80px, -80px)'
 					}
 				}
 			},
