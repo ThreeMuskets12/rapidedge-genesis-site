@@ -102,7 +102,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="bg-gray-800/80 backdrop-blur-sm p-3 md:p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2 flex flex-col items-center">
+          <div className="bg-gray-800/80 backdrop-blur-sm p-0 md:p-6 rounded-xl border border-gray-700 max-w-[630px] order-2 lg:order-2 flex flex-col items-center mx-auto w-fit md:w-auto">
             <div className="flex items-center mb-4 w-full">
               <div className="p-2 bg-teal-500/20 rounded-lg mr-3">
                 <Calendar className="w-6 h-6 text-teal-400" />
@@ -112,7 +112,7 @@ const Contact = () => {
             
             {/* Calendly Embed */}
             <div 
-              className="calendly-inline-widget w-[320px] md:w-[560px]" 
+              className="calendly-inline-widget w-[320px] md:w-[560px] mx-auto" 
               data-url="https://calendly.com/noah-rapidedge/30min"
               style={{ height: '900px' }}
             />
