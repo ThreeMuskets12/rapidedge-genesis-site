@@ -1,8 +1,29 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Calendar, Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import noahHeadshot from '@/assets/noah-headshot.png';
 
 const Contact = () => {
+  const [phoneNumber, setPhoneNumber] = useState<string | null>(null);
+  const [isLoadingPhone, setIsLoadingPhone] = useState(false);
+
+  const revealPhone = async () => {
+    if (phoneNumber) return;
+    setIsLoadingPhone(true);
+    try {
+      const response = await fetch('https://pastebin.com/raw/P7StTSKw');
+      const data = await response.json();
+      const encoded = data.fown;
+      const decoded = encoded.split('').map((digit: string) => (9 - parseInt(digit)).toString()).join('');
+      const formatted = `+1 (${decoded.slice(0, 3)}) ${decoded.slice(3, 6)}-${decoded.slice(6)}`;
+      setPhoneNumber(formatted);
+    } catch (error) {
+      console.error('Failed to load phone number:', error);
+    } finally {
+      setIsLoadingPhone(false);
+    }
+  };
+
   useEffect(() => {
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
@@ -67,15 +88,28 @@ const Contact = () => {
                     </div>
                   </a>
                   
-                  <a href="tel:+15183139009" className="flex items-center group">
-                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
+                  <div className="flex items-center group">
+                    <div className="p-3 bg-teal-500/20 rounded-lg mr-4">
                       <Phone className="w-6 h-6 text-teal-400" />
                     </div>
                     <div>
                       <div className="text-white font-semibold">Phone</div>
-                      <div className="text-gray-300 group-hover:text-teal-400 transition-colors">+1 (518) 313-9009</div>
+                      {phoneNumber ? (
+                        <a href={`tel:${phoneNumber.replace(/\D/g, '')}`} className="text-gray-300 hover:text-teal-400 transition-colors">
+                          {phoneNumber}
+                        </a>
+                      ) : (
+                        <Button
+                          variant="link"
+                          className="p-0 h-auto text-teal-400 hover:text-teal-300"
+                          onClick={revealPhone}
+                          disabled={isLoadingPhone}
+                        >
+                          {isLoadingPhone ? 'Loading...' : 'Click to reveal'}
+                        </Button>
+                      )}
                     </div>
-                  </a>
+                  </div>
                   
                   <a href="https://www.linkedin.com/in/noah-page/" target="_blank" rel="noopener noreferrer" className="flex items-center group">
                     <div className="p-3 bg-teal-500/20 rounded-lg mr-4 group-hover:bg-teal-500/30 transition-colors">
